@@ -40,7 +40,7 @@ def run(config: RunConfig) -> List[FunctionCall]:
 
     # Initialise model.
     try:
-        from llm_sdk import Small_LLM_Model  # type: ignore[import]
+        from llm_sdk.llm_sdk import Small_LLM_Model  # type: ignore[import]
         model = Small_LLM_Model()
     except Exception as exc:
         logger.error("Failed to initialise Small_LLM_Model: %s", exc)
